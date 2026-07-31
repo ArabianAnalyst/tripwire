@@ -6,6 +6,7 @@ import { noopJudge } from "./judge.ts";
 import type { Judge, Suspicion } from "./judge.ts";
 import { adversarialLibrary } from "./adversarial.ts";
 import type { Scenario } from "./adversarial.ts";
+import { writeHtmlReport } from "./report.ts";
 
 export type Entrypoint = (
   input: unknown,
@@ -18,6 +19,7 @@ export interface ScanOptions {
   scenarios?: Scenario[];
   adversarial?: boolean;
   judge?: Judge;
+  report?: string;
 }
 
 export interface ScenarioResult {
@@ -66,7 +68,7 @@ export async function scan(options: ScanOptions): Promise<ScanReport> {
     0,
   );
 
-  return {
+  const out: ScanReport = {
     scenarios: results,
     summary: {
       totalScenarios: results.length,
@@ -74,4 +76,7 @@ export async function scan(options: ScanOptions): Promise<ScanReport> {
       suspicions: suspicionCount,
     },
   };
+
+  if (options.report) writeHtmlReport(out, options.report);
+  return out;
 }
