@@ -1,20 +1,20 @@
-export type { ActionRecord, Outcome, RecordMatcher } from "./types.ts";
-export { matches } from "./types.ts";
-export { Trace } from "./trace.ts";
-export { Recorder, fromBlackbox } from "./capture.ts";
-export { defineExpectations } from "./expectations.ts";
-export type { Expectation } from "./expectations.ts";
-export { runExpectations } from "./checker.ts";
-export type { CheckResult } from "./checker.ts";
-export { noopJudge } from "./judge.ts";
-export type { Judge, Suspicion } from "./judge.ts";
-export { adversarialLibrary } from "./adversarial.ts";
-export type { Scenario } from "./adversarial.ts";
-export { scan } from "./scanner.ts";
+export type { ActionRecord, Outcome, RecordMatcher } from "./types.js";
+export { matches } from "./types.js";
+export { Trace } from "./trace.js";
+export { Recorder, fromBlackbox } from "./capture.js";
+export { defineExpectations } from "./expectations.js";
+export type { Expectation } from "./expectations.js";
+export { runExpectations } from "./checker.js";
+export type { CheckResult } from "./checker.js";
+export { noopJudge } from "./judge.js";
+export type { Judge, Suspicion } from "./judge.js";
+export { adversarialLibrary } from "./adversarial.js";
+export type { Scenario } from "./adversarial.js";
+export { scan } from "./scanner.js";
 export type {
   Entrypoint,
   ScanOptions,
   ScanReport,
   ScenarioResult,
-} from "./scanner.ts";
-export { renderTerminal, renderHtml, writeHtmlReport } from "./report.ts";
+} from "./scanner.js";
+export { renderTerminal, renderHtml, writeHtmlReport } from "./report.js";

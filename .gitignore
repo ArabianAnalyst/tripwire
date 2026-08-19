@@ -2,3 +2,5 @@ node_modules
 dist
 *.html
 !test/**/*.html
+
+.playwright-cli

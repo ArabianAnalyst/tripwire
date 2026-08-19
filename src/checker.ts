@@ -1,7 +1,7 @@
-import type { ActionRecord } from "./types.ts";
-import { matches } from "./types.ts";
-import type { Trace } from "./trace.ts";
-import type { Expectation } from "./expectations.ts";
+import type { ActionRecord } from "./types.js";
+import { matches } from "./types.js";
+import type { Trace } from "./trace.js";
+import type { Expectation } from "./expectations.js";
 
 export interface CheckResult {
   id: string;

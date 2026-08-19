@@ -1,12 +1,56 @@
 {
-  "name": "tripwire",
-  "version": "0.0.0",
-  "private": true,
+  "name": "@olurabian/tripwire",
+  "version": "0.1.0",
+  "description": "Catch the silent wrong action, the thing an AI agent does that returns ok but is wrong. A read-only scanner for agent runs. Zero dependencies.",
   "type": "module",
-  "description": "Catch the silent wrong action, the thing an AI agent does that returns ok but is wrong.",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/index.js",
+      "types": "./dist/index.d.ts"
+    }
+  },
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE"
+  ],
   "scripts": {
+    "build": "tsc",
+    "typecheck": "tsc --noEmit",
     "test": "tsx --test test/*.test.ts",
-    "typecheck": "tsc --noEmit"
+    "demo": "tsx examples/fake-agent.ts",
+    "prepublishOnly": "npm run build"
+  },
+  "keywords": [
+    "ai",
+    "agents",
+    "llm",
+    "monitoring",
+    "observability",
+    "evaluation",
+    "testing",
+    "reliability",
+    "governance",
+    "agentic",
+    "safety"
+  ],
+  "license": "MIT",
+  "publishConfig": {
+    "access": "public"
+  },
+  "author": "Oluwasegun Araba (ARABA)",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ArabianAnalyst/tripwire"
+  },
+  "homepage": "https://github.com/ArabianAnalyst/tripwire#readme",
+  "bugs": {
+    "url": "https://github.com/ArabianAnalyst/tripwire/issues"
+  },
+  "engines": {
+    "node": ">=18"
   },
   "devDependencies": {
     "@types/node": "^22.10.0",

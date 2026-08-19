@@ -1,5 +1,5 @@
 import { writeFileSync } from "node:fs";
-import type { ScanReport, ScenarioResult } from "./scanner.ts";
+import type { ScanReport, ScenarioResult } from "./scanner.js";
 
 function fmt(v: unknown): string {
   if (v === undefined) return "(none)";

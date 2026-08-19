@@ -1,6 +1,6 @@
-import type { ActionRecord } from "./types.ts";
-import type { Trace } from "./trace.ts";
-import type { CheckResult } from "./checker.ts";
+import type { ActionRecord } from "./types.js";
+import type { Trace } from "./trace.js";
+import type { CheckResult } from "./checker.js";
 
 // A suspicion is always advisory. It names a record and a note, and may propose
 // an expectation to add. It deliberately carries no verdict field. The

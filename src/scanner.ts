@@ -1,12 +1,12 @@
-import { Recorder } from "./capture.ts";
-import { runExpectations } from "./checker.ts";
-import type { CheckResult } from "./checker.ts";
-import type { Expectation } from "./expectations.ts";
-import { noopJudge } from "./judge.ts";
-import type { Judge, Suspicion } from "./judge.ts";
-import { adversarialLibrary } from "./adversarial.ts";
-import type { Scenario } from "./adversarial.ts";
-import { writeHtmlReport } from "./report.ts";
+import { Recorder } from "./capture.js";
+import { runExpectations } from "./checker.js";
+import type { CheckResult } from "./checker.js";
+import type { Expectation } from "./expectations.js";
+import { noopJudge } from "./judge.js";
+import type { Judge, Suspicion } from "./judge.js";
+import { adversarialLibrary } from "./adversarial.js";
+import type { Scenario } from "./adversarial.js";
+import { writeHtmlReport } from "./report.js";
 
 export type Entrypoint = (
   input: unknown,

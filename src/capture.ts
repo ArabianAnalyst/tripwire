@@ -1,5 +1,5 @@
-import type { ActionRecord } from "./types.ts";
-import { Trace } from "./trace.ts";
+import type { ActionRecord } from "./types.js";
+import { Trace } from "./trace.js";
 
 export class Recorder {
   private readonly records: ActionRecord[] = [];

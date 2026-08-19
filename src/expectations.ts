@@ -1,5 +1,5 @@
-import type { ActionRecord, RecordMatcher } from "./types.ts";
-import type { Trace } from "./trace.ts";
+import type { ActionRecord, RecordMatcher } from "./types.js";
+import type { Trace } from "./trace.js";
 
 export interface Expectation {
   id: string;

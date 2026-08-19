@@ -1,5 +1,5 @@
-import type { ActionRecord, RecordMatcher } from "./types.ts";
-import { matches } from "./types.ts";
+import type { ActionRecord, RecordMatcher } from "./types.js";
+import { matches } from "./types.js";
 
 export class Trace {
   constructor(readonly records: ActionRecord[]) {}
